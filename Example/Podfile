@@ -1,0 +1,6 @@
+use_frameworks!
+target 'FoobarLib_Tests' do
+  pod 'FoobarLib', :path => '../'
+  
+  
+end

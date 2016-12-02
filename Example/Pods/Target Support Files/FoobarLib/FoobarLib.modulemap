@@ -1,0 +1,6 @@
+framework module FoobarLib {
+  umbrella header "FoobarLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

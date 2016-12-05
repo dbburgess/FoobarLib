@@ -30,13 +30,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'FoobarLib/Classes/**/*'
   s.vendored_frameworks = [
-    'Frameworks/Firebase/Analytics/FirebaseCore.framework',
-    'Frameworks/Firebase/Analytics/FirebaseAnalytics.framework',
-    'Frameworks/Firebase/Analytics/FirebaseInstanceID.framework',
-    'Frameworks/Firebase/Analytics/GoogleInterchangeUtilities.framework',
-    'Frameworks/Firebase/Analytics/GoogleSymbolUtilities.framework',
-    'Frameworks/Firebase/Analytics/GoogleToolboxForMac.framework',
-    'Frameworks/Firebase/Messaging/FirebaseMessaging.framework',
+    'FoobarLib/Frameworks/Firebase/Analytics/FirebaseCore.framework',
+    'FoobarLib/Frameworks/Firebase/Analytics/FirebaseAnalytics.framework',
+    'FoobarLib/Frameworks/Firebase/Analytics/FirebaseInstanceID.framework',
+    'FoobarLib/Frameworks/Firebase/Analytics/GoogleInterchangeUtilities.framework',
+    'FoobarLib/Frameworks/Firebase/Analytics/GoogleSymbolUtilities.framework',
+    'FoobarLib/Frameworks/Firebase/Analytics/GoogleToolboxForMac.framework',
+    'FoobarLib/Frameworks/Firebase/Messaging/FirebaseMessaging.framework',
   ]
 
   s.pod_target_xcconfig = {

@@ -22,21 +22,24 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/azmeuk/FoobarLib'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'FooGuy' => 'guy@foo.bar' }
   s.source           = { :git => 'https://github.com/azmeuk/FoobarLib.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'FoobarLib/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'FoobarLib' => ['FoobarLib/Assets/*.png']
-  # }
+  s.vendored_frameworks = [
+    'Frameworks/Firebase/Analytics/FirebaseCore.framework',
+    'Frameworks/Firebase/Analytics/FirebaseAnalytics.framework',
+    'Frameworks/Firebase/Analytics/FirebaseInstanceID.framework',
+    'Frameworks/Firebase/Analytics/GoogleInterchangeUtilities.framework',
+    'Frameworks/Firebase/Analytics/GoogleSymbolUtilities.framework',
+    'Frameworks/Firebase/Analytics/GoogleToolboxForMac.framework',
+    'Frameworks/Firebase/Messaging/FirebaseMessaging.framework',
+  ]
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '$(inherited) -ObjC',
+  }
 end

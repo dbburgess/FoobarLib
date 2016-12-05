@@ -11,7 +11,7 @@
 		0DF3F26CED759F1BF5291C43A04B8B30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		1C2C8BDECDC34281B7DB228C90363E11 /* FoobarLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A25DBA6D5D57EB8A260D266526247 /* FoobarLib-dummy.m */; };
 		49682A9A22917C44FBB1FD5D85745D43 /* Pods-FoobarLib_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C6B81EC999578FC4C9CA99BFDBC5F8 /* Pods-FoobarLib_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52CAD7E7B880E381C5D7BC5E384C0CB1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2164F4F04AD35F1A3ABBC256172CD760 /* ReplaceMe.swift */; };
+		9D8274FF1DF5619400DB1557 /* Foobar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8274FE1DF5619400DB1557 /* Foobar.swift */; };
 		A61D2575009BE328909EE47473DD2375 /* Pods-FoobarLib_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C324E963621E86779441A65A1CE6957E /* Pods-FoobarLib_Tests-dummy.m */; };
 		CAD870CEA0712C6BC18BC95C02269A27 /* FoobarLib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E920FDF68DAEB16C20B0560AB98A046 /* FoobarLib-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -30,7 +30,6 @@
 		1555F88D2A1841CB48CFE378F7503A8E /* FoobarLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoobarLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9F5925E22A27D12F2D26BD95F74C86 /* FoobarLib.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoobarLib.xcconfig; sourceTree = "<group>"; };
 		1E920FDF68DAEB16C20B0560AB98A046 /* FoobarLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoobarLib-umbrella.h"; sourceTree = "<group>"; };
-		2164F4F04AD35F1A3ABBC256172CD760 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		2BC22D8B4B5F62A87BFC015ED0DFED70 /* Pods-FoobarLib_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FoobarLib_Tests.modulemap"; sourceTree = "<group>"; };
 		4A2F662E984968612894B3D0B35A1E06 /* FoobarLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FoobarLib.modulemap; sourceTree = "<group>"; };
 		5C0A25DBA6D5D57EB8A260D266526247 /* FoobarLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoobarLib-dummy.m"; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		91F8C5B55DDFCECE0F32AF0E4251AC12 /* Pods-FoobarLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoobarLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		984C85D9771751288FDFAAE24E992B2B /* Pods-FoobarLib_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoobarLib_Tests-resources.sh"; sourceTree = "<group>"; };
+		9D8274FE1DF5619400DB1557 /* Foobar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foobar.swift; sourceTree = "<group>"; };
 		A4A54145A8DAF18A00135E43F8DAE7D5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB541FBD47ED738718D07147620D3967 /* Pods-FoobarLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoobarLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C324E963621E86779441A65A1CE6957E /* Pods-FoobarLib_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoobarLib_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		27C539094CB7769C27477BDB322DDFF7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2164F4F04AD35F1A3ABBC256172CD760 /* ReplaceMe.swift */,
+				9D8274FE1DF5619400DB1557 /* Foobar.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8274FF1DF5619400DB1557 /* Foobar.swift in Sources */,
 				1C2C8BDECDC34281B7DB228C90363E11 /* FoobarLib-dummy.m in Sources */,
-				52CAD7E7B880E381C5D7BC5E384C0CB1 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B9F5925E22A27D12F2D26BD95F74C86 /* FoobarLib.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -495,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B9F5925E22A27D12F2D26BD95F74C86 /* FoobarLib.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";

@@ -1,26 +1,8 @@
-#
-# Be sure to run `pod lib lint FoobarLib.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'FoobarLib'
   s.version          = '0.1.0'
   s.summary          = 'A not so short description of FoobarLib.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
+  s.description      = 'This pod is so foobar that it foobars all the other foobars.'
   s.homepage         = 'https://github.com/azmeuk/FoobarLib'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'FooGuy' => 'guy@foo.bar' }
@@ -28,18 +10,21 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'FoobarLib/Classes/**/*'
+  s.source_files = [
+    'FoobarLib/Classes/**/*',
+#    'FoobarLib/Frameworks/Firebase/Firebase.h',
+  ]
   s.vendored_frameworks = [
-    'FoobarLib/Frameworks/Firebase/Analytics/FirebaseCore.framework',
-    'FoobarLib/Frameworks/Firebase/Analytics/FirebaseAnalytics.framework',
-    'FoobarLib/Frameworks/Firebase/Analytics/FirebaseInstanceID.framework',
-    'FoobarLib/Frameworks/Firebase/Analytics/GoogleInterchangeUtilities.framework',
-    'FoobarLib/Frameworks/Firebase/Analytics/GoogleSymbolUtilities.framework',
-    'FoobarLib/Frameworks/Firebase/Analytics/GoogleToolboxForMac.framework',
-    'FoobarLib/Frameworks/Firebase/Messaging/FirebaseMessaging.framework',
+#    'FoobarLib/Frameworks/Firebase/Analytics/*.framework',
   ]
 
+  s.dependency 'Firebase'
+
   s.pod_target_xcconfig = {
-    'OTHER_LDFLAGS' => '$(inherited) -ObjC',
+#    'OTHER_LDFLAGS' => '$(inherited) -ObjC',
+#    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/**',
+#    'USER_HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FirebaseCore.framework/Modules',
+#    'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/FirebaseCore.framework/Modules',
+#    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
   }
 end

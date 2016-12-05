@@ -1,6 +1,0 @@
-framework module Pods_FoobarLib_Tests {
-  umbrella header "Pods-FoobarLib_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

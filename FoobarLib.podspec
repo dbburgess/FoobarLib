@@ -12,16 +12,36 @@ Pod::Spec.new do |s|
 
   s.source_files = [
     'FoobarLib/Classes/**/*',
-#    'FoobarLib/Frameworks/Firebase/Firebase.h',
-  ]
-  s.vendored_frameworks = [
-#    'FoobarLib/Frameworks/Firebase/Analytics/*.framework',
   ]
 
-  s.dependency 'Firebase'
+  # Specify what libraries this depends on.
+  s.libraries = [
+    'c++', # FirebaseAnalytics.
+    'icucore', # FirebaseDatabase.
+    'sqlite3', # FirebaseAnalytics.
+    'z', # FirebaseAnalytics.
+  ]
+
+  # Specify what frameworks this depends on.
+  s.frameworks = [
+    'AddressBook', # FirebaseAnalytics.
+    'AdSupport', # FirebaseAnalytics.
+    'CFNetwork', # FirebaseDatabase.
+    'SafariServices', # FirebaseAnalytics.
+    'Security', # FirebaseAnalytics, FirebaseAuth, FirebaseDatabase.
+    'StoreKit', # FirebaseAnalytics.
+    'SystemConfiguration', # FirebaseAnalytics, FirebaseDatabase.
+  ]
+
+  s.vendored_frameworks = [
+    'FoobarLib/Frameworks/Firebase/Analytics/*.framework',
+    'FoobarLib/Frameworks/Firebase/Auth/*.framework',
+    'FoobarLib/Frameworks/Firebase/Database/*.framework',
+    'FoobarLib/Frameworks/Firebase/Messaging/*.framework',
+  ]
 
   s.pod_target_xcconfig = {
-#    'OTHER_LDFLAGS' => '$(inherited) -ObjC',
+    'OTHER_LDFLAGS' => '$(inherited) -ObjC',
 #    'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/**',
 #    'USER_HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/FirebaseCore.framework/Modules',
 #    'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/FirebaseCore.framework/Modules',
